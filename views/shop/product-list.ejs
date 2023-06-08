@@ -1,0 +1,31 @@
+
+<%- include("../includes/head.ejs") %>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+      <% if (prods.length > 0) { %>
+      <div class="grid">
+        <% for (let product of prods) { %>
+        <article>
+          <header>
+            <h1 class="product-title"><%= product.title %></h1>
+          </header>
+          <div>
+            <img class="product-image" src="nikesb.jpg" alt="nike shoes" />
+          </div>
+          <div>
+            <h3 class="product-price">$19.99</h3>
+            <p>New shoes that have a really nice style if you work on it.</p>
+          </div>
+          <div>
+            <button class="add-to-cart-btn" type="">Add to Cart</button>
+          </div>
+        </article>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h1>No products Found!</h1>
+      <% } %>
+    </main>
+    <%- include('../includes/end.ejs') %>
+
