@@ -1,0 +1,36 @@
+
+<%- include("../includes/head.ejs") %>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+      <% if (prods.length > 0) { %>
+      <div class="grid">
+        <% for (let product of prods) { %>
+        <article>
+          <header>
+            <h1 class="product-title"><%= product.title %></h1>
+          </header>
+          <div>
+            <img class="product-image" src="nikesb.jpg" alt="nike shoes" />
+          </div>
+          <div>
+            <h3 class="product-price"><%= product.price %></h3>
+            <p><%= product.description %></p>
+          </div>
+          <div>
+            <a href="/admin/edit-product/<%= product.id %>?edit=true" class="edit-btn" type="submit">Edit</a>
+            <form action="/admin/delete-product" method="POST">
+                <button class="delete-btn" type="submit">Delete</button>
+                <input type="hidden" name="productId" value="<%= product.id %>">
+            </form>
+            <input type="hidden" name="productId" value="<%= product.id %>">
+          </div>
+        </article>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h1>No products Found!</h1>
+      <% } %>
+    </main>
+    <%- include('../includes/end.ejs') %>
+

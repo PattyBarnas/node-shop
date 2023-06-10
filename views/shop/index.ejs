@@ -11,15 +11,14 @@
             <h1 class="product-title"><%= product.title %></h1>
           </header>
           <div>
-            <img class="product-image" src="<%= product.imageUrl %>" alt="<%= product.imageUrl %>" />
+            <img class="product-image" src="<%= product.imageUrl %>" alt="nike shoes" />
           </div>
           <div>
-            <h3 class="product-price">$19.99</h3>
-            <p>New shoes that have a really nice style if you work on it.</p>
+            <h3 class="product-price"><%= product.price %></h3>
+            <p><%= product.description %></p>
           </div>
           <div>
-            <a class=" details edit-btn" href="products/<%= product.id %>">Details</a>
-         <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
           </div>
         </article>
         <% } %>
