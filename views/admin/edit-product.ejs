@@ -20,7 +20,7 @@
           type="text"
           name="imageUrl"
           id="imageUrl"
-          value="<% if (editing) { %> <%=product.imageUrl %> <% } %>"
+          value="<% if (editing) { %><%=product.imageUrl %><% } %>"
           />
         </div>
         <div>
@@ -30,8 +30,7 @@
           name="price"
           id="price"
           step="0.01"
-          value="<% if (editing) { %><%=product.price %><% } %>"
-          />
+          value="<% if (editing) { %><%= product.price %><% } %>">
         </div>
         <div>
           <label for="description">Description</label>
@@ -39,7 +38,6 @@
           type="text"
           name="description"
           id="description"
-     
           ><% if (editing) { %><%=product.description %><% } %></textarea>
         </div>
         <% if (editing) { %>
