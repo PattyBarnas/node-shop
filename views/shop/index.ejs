@@ -18,6 +18,8 @@
             <p><%= product.description %></p>
           </div>
           <div>
+            <a class=" details edit-btn" href="products/<%= product._id %>">Details</a>
+
             <%- include('../includes/add-to-cart.ejs', {product: product}) %>
           </div>
         </article>
