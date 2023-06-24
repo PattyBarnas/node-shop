@@ -1,5 +1,8 @@
 <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/cart.css" />
+</head>
 <%- include('../includes/navigation.ejs') %>
+</head>
     <main>  
 
       <% if (!products.length > 0) { %>
@@ -9,20 +12,21 @@
        
           <ul>
             <% products.forEach(product => { %>
-              <li>
-                <p><%= product.title %></p>
-                <h2> <%= product.quantity %></h2>
+              <li class="cart-items">
+                <p><%= product.productId.title %></p>
+                <h2>x <%= product.quantity %></h2>
                 <form action="/cart-delete-item" method="POST">
-                  <input type="hidden" value="<%= product._id %>" name="productId">
-                  <button type="submit">DELETE</button>
+                  <input type="hidden" value="<%= product.productId._id %>" name="productId">
+                  <button class="delete-btn" type="submit">DELETE</button>
                 </form>
               </li>
               <% }) %>
           </ul>
           <hr>
           <div class="centered">
+            <h4><%= products.price %></h4>
             <form action="/create-order" method="POST">
-                <button type="submit" class="btn">Order Now!</button>
+                <button type="submit" class="order-btn">Order Now!</button>
             </form>
         </div>
       </main>

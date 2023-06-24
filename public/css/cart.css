@@ -1,0 +1,21 @@
+ul {
+  margin-bottom: 2rem;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 2rem;
+}
+.order-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.4rem 2.2rem;
+  text-transform: uppercase;
+  border: 1px solid red;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+}

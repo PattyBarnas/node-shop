@@ -1,15 +1,16 @@
 <%- include('../includes/head.ejs') %>
+</head>
 <%- include('../includes/navigation.ejs') %>
-    <main>
+    <main class="product-detail-container">
       <header>
         <h1 class="product-title"><%= pageTitle %></h1>
       </header>
       <div>
-        <!-- <img class="product-image" src="<%= product.imageUrl %>" alt="nike shoes" /> -->
+        <img class="product-image" src="<%= product.imageUrl %>" alt="<%= product.imageUrl %>" />
       </div>
       <div>
         <h3 class="product-price"><%= product.price %></h3>
-        <p><%= product.description %></p>
+        <p class="product-description"><%= product.description %></p>
       </div>
       <div>
         <%- include('../includes/add-to-cart.ejs', {product: product}) %>

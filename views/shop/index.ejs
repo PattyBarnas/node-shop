@@ -1,5 +1,6 @@
 
 <%- include("../includes/head.ejs") %>
+</head>
   <body>
     <%- include('../includes/navigation.ejs') %>
     <main>
@@ -18,7 +19,7 @@
             <p><%= product.description %></p>
           </div>
           <div>
-            <a class=" details edit-btn" href="products/<%= product._id %>">Details</a>
+            <a class="details-btn" href="products/<%= product._id %>">Details</a>
 
             <%- include('../includes/add-to-cart.ejs', {product: product}) %>
           </div>

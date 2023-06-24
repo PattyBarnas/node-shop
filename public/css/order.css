@@ -1,0 +1,21 @@
+.orders {
+}
+.orders__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: solid 2px #495057;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 2.2rem;
+}
+.orders__item h1 {
+  font-size: 2.2rem;
+}
+.orders__products {
+  display: flex;
+  list-style: none;
+  gap: 2.2rem;
+}
